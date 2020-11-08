@@ -124,7 +124,7 @@ class Test {
         arraylist.add(new Exercise("Push-ups ", 30, " Place your hands on the floor. " +
                 "Raise up onto your toes so that all of your body weight is on your hands and your feet." +
                 " Bend your elbows and lower your chest down toward the floor. Then," +
-                " push off the floor and extend them so that you return to the starting position.", "stand up"));
+                " push off the floor and extend them so that you return to the starting position.", "floor"));
 
         arraylist.add(new Exercise("Planks ", 90, "Start on the floor on your hands and knees. " +
                 "Lower your forearms to the floor with elbows positioned under your shoulders and your hands shoulder-width apart." +
