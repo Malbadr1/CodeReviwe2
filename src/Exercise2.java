@@ -60,10 +60,10 @@ public class Exercise2 {
 }
 
 class ExerciseUtil2 {
-    public static void floorPosition(Exercise2[] list) {
+    public static void getExercise(Exercise2[] list) {
         for (int i = 0; i < list.length; i++) {
 
-            list[i].getPosition();
+            System.out.println(list[i]+"\n");
         }
     }
 
@@ -79,7 +79,7 @@ class ExerciseUtil2 {
 
                 System.out.println("Name: " + name);
 
-                System.out.println("Duration: " + duration);
+                System.out.println("Duration: " + duration+"\n");
 
 
             }
@@ -146,15 +146,13 @@ class TestTry{
                 " Repeat with other hand.", "stand up");
 
 
-        for (  Exercise2 s : exercise2s) {
-            System.out.println(s+"\n");
 
-        }
+        ExerciseUtil2.getExercise(exercise2s);
 
 
-        System.out.println("Floor Position Exercise");
+        System.out.println("Floor Position Exercise"+"\n");
         ExerciseUtil2.printFloorPositionExercise(exercise2s);
-        System.out.println("Floor Position Exercise, More Minute");
+        System.out.println("Floor Position Exercise, More Minute"+"\n");
         ExerciseUtil2.printFloorPositionExerciseMoreMinute(exercise2s);
 
 
