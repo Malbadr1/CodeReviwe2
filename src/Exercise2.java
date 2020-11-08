@@ -77,9 +77,9 @@ class ExerciseUtil2 {
                 String description = list[i].getDescription();
 
 
-                System.out.println("Name: " + name);
+                System.out.println("Name : " + name);
 
-                System.out.println("Duration: " + duration+"\n");
+                System.out.println("Duration : " + duration+"\n");
 
 
             }
