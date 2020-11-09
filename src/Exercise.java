@@ -70,19 +70,14 @@ public class Exercise {
 }
 
 class ExerciseUtil {
-    public static void floorPosition(Exercise[] list) {
-        for (int i = 0; i < list.length; i++) {
 
-            list[i].getPosition();
-        }
-    }
 
-    public static void printFloorPositionExercise(Exercise[] list) {
-        for (int i = 0; i < list.length; i++) {
+    public static void printExercise(ArrayList<Exercise>list) {
+        for (Exercise i:list) {
 
-            String name = list[i].getExercisesName();
+            String name = i.getExercisesName();
 
-            double duration = list[i].getDuration();
+            double duration = i.getDuration();
 
 
             System.out.println("Name: " + name);
@@ -93,13 +88,34 @@ class ExerciseUtil {
 
     }
 
-    public static void printFloorPositionExerciseMoreMinute(Exercise[] list) {
-        for (int i = 0; i < list.length; i++) {
+    public static void printFloorPositionExercise(ArrayList<Exercise>list) {
+        for (Exercise i:list) {
+            if (i.getPosition().equals("floor")) {
 
-            String name = list[i].getExercisesName();
+                String name = i.getExercisesName();
 
-            double duration = list[i].getDuration();
-            if (list[i].getDuration() > 60) {
+                double duration = i.getDuration();
+                String description = i.getDescription();
+
+
+                System.out.println("Name : " + name);
+
+                System.out.println("Duration : " + duration+"\n");
+
+
+            }
+
+
+        }
+    }
+
+    public static void printFloorPositionExerciseMoreMinute(ArrayList<Exercise>list) {
+        for (Exercise i:list) {
+
+            String name = i.getExercisesName();
+
+            double duration = i.getDuration();
+            if (i.getDuration() > 60) {
 
                 System.out.println("Name: " + name);
 
@@ -150,38 +166,14 @@ class Test {
                 " Repeat with other hand.", "stand up"));
 
 
-        for (Exercise s : arraylist) {
-            System.out.println(s);
-
-        }
-
-
-        System.out.println("");
-
-
-        Exercise[] exercises = new Exercise[3];
-        exercises[0] = new Exercise("Planks ", 90, "Start on the floor on your hands and knees. " +
-                "Lower your forearms to the floor with elbows positioned under your shoulders and your hands shoulder-width apart." +
-                " Maintain a straight line from heels through the top of your head, looking down at the floor." +
-                " Now, tighten your abs and hold.", "floor");
-
-        exercises[1] = new Exercise("Push-ups ", 30, " Place your hands on the floor. " +
-                "Raise up onto your toes so that all of your body weight is on your hands and your feet." +
-                " Bend your elbows and lower your chest down toward the floor. Then," +
-                " push off the floor and extend them so that you return to the starting position.", "stand up");
-        exercises[2] = new Exercise("Backward Kick", 60, "Get in an all-fours position with your knees and hands on the floor." +
-                " Your back is straight. Lift your leg up, and straighten it. Form a 90 degree angle in the ankle. " +
-                " Raise your leg with your heel pushing up and constantly forming a 90 degree angle in between the legs." +
-                " Return to the starting position and repeat.", "floor");
-
-
+        ExerciseUtil.printExercise(arraylist);
         System.out.println("Floor Position Exercise");
-        ExerciseUtil.floorPosition(exercises);
-        ExerciseUtil.printFloorPositionExercise(exercises);
+
+        ExerciseUtil.printFloorPositionExercise(arraylist);
 
         System.out.println("");
         System.out.println("Floor Position Exercise More a Minute");
-        ExerciseUtil.printFloorPositionExerciseMoreMinute(exercises);
+        ExerciseUtil.printFloorPositionExerciseMoreMinute(arraylist);
 
 
     }
